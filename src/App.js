@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Cupcake from "./Cupcake";
+// ./ significa dentro de esta misma carpeta.
+//No es necesario ponerle la etiqueta.js ya que webpack se encarga de eso
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reactt
-        </a>
-      </header>
+const App = () => (
+    <div>
+      <Cupcake color="rosa" sabor="vainilla" />
+      <Cupcake color="azul" sabor="chocolate" />
+      <Cupcake color="rosa" sabor="vainilla" />
+      <Cupcake color="azul" sabor="chocolate" />
     </div>
-  );
-}
+);
 
+//importante solo se puede devolver un solo elemento.
 export default App;
