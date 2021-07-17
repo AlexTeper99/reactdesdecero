@@ -6,8 +6,7 @@ const App = () => (
     <div>
       <Cupcake color="rosa" sabor="vainilla" />
       <Cupcake color="azul" sabor="chocolate" />
-      <Cupcake color="rosa" sabor="vainilla" />
-      <Cupcake color="azul" sabor="chocolate" />
+
     </div>
 );
 
