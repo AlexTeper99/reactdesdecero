@@ -1,6 +1,5 @@
-
-
 import {useState, useEffect} from "react"
+import "./Cupcake.css"
 
 const Cupcake = ({sabor, color}) => {
 
@@ -25,8 +24,10 @@ const Cupcake = ({sabor, color}) => {
         console.log('Estamos por iniciar el componente', Date.now())
     }, [vendido])
 
+
     return(
         <div className="cupcake">
+          //  <img src={} alt ={sabor}/>
             <h2>{color}</h2>
             <p>{`Sabor:  ${sabor}`}</p>
 
@@ -47,10 +48,8 @@ const Cupcake = ({sabor, color}) => {
 export default Cupcake
 
 /**
- useEffect
- El hook useEffect nos va a permitir controlar efectos colaterales que sucedan a partir del renderizado
- de nuestros componentes. Permitira hacer una "simulacion" de lo que eran los metodos
- de ciclo de vida en un componente de clase.
- Este es muy util cada vez que queramos traerme informacion. Por ejemplo utilizarlo antes de que un elemento se monte para traer datos de una bd o una API
- Inconveniente: Cada vez que que se actualice el componente va a ejecutarse la funcion.
+    Hook useRef
+    Nos permite hacer una referencia. En react al trabajar con un dom virtual
+    las referencias nos permiten atrapar un elemento del DOM virtual y manipularlo
+    como si fuera en el DOM real.
  */
