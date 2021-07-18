@@ -1,24 +1,40 @@
 
 
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 const Cupcake = ({sabor, color}) => {
 
-//useState nos va a permitir utilizar el estado en los componentes funcionales.
-//useState devuelve un array de dos elementos estado y funcion que actualiza el estado.Voy a almacenarlo en una variable (array). Por convecion el nombre de la funcion empieza con set.
-//estado puede ser de cualquier tipo. (number, objeto etc)
-//el useState recibe el valor por defecto de mi componente
+    //creo dos estados.
     const [vendido,setVendido] = useState(false)
+    const [reservado,setReservado] = useState(false)
 
     //vender ahora va a ser una funcion
     const vender = () => {
         setVendido(true)
+        setReservado(true)
     }
+
+    const reservar = () => {
+        setReservado(true)
+    }
+
+    //param1: Una funcion que se va a ejecutar cada vez que mi componente se va a montar/actualizar.
+    //param2 OPCIONAL: Un array que recibe los valores del estado que pueden ir cambiando. Esta funcion se va a volver a ejecutar cada vez que cambia el valor que esta dentro del array.
+    //Si quiero que se ejecute solo 1 vez doy el array vacio, si quiero que cualquier cambio de estado llame a la funcion saco el array y si quiero que observe y se llame con un cambio de un valor en particular lo pongo en el array
+    useEffect(()=>{
+        console.log('Estamos por iniciar el componente', Date.now())
+    }, [vendido])
 
     return(
         <div className="cupcake">
             <h2>{color}</h2>
             <p>{`Sabor:  ${sabor}`}</p>
+
+            <p><b>Estado: </b>{reservado ? "Reservado": "Libre"}</p>
+            {
+                !reservado && <button onClick={reservar}>Reservar</button>
+            }
+
             <p><b>Estado: </b>{vendido ? "Vendido": "A la venta"}</p>
             {
                 !vendido && <button onClick={vender}>Vender</button>
@@ -31,10 +47,10 @@ const Cupcake = ({sabor, color}) => {
 export default Cupcake
 
 /**
-useState en vez de recibir un objeto puede recibir cualquier tipo de dato.
- Por ejemplo un booleano.
- Si quiero recibir un objeto por ejemplo
- 1) Si mi declaracion es: const [estado,setEstado] = useState({vendido: false})
- Para acceder a sus atributos hago:
- estado.vendido
+ useEffect
+ El hook useEffect nos va a permitir controlar efectos colaterales que sucedan a partir del renderizado
+ de nuestros componentes. Permitira hacer una "simulacion" de lo que eran los metodos
+ de ciclo de vida en un componente de clase.
+ Este es muy util cada vez que queramos traerme informacion. Por ejemplo utilizarlo antes de que un elemento se monte para traer datos de una bd o una API
+ Inconveniente: Cada vez que que se actualice el componente va a ejecutarse la funcion.
  */
