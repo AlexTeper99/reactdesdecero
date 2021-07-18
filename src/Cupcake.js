@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from "react"
+import {useState, useRef} from "react"
 import "./Cupcake.css"
 
 const Cupcake = ({foto, sabor, color}) => {
@@ -12,22 +12,19 @@ const Cupcake = ({foto, sabor, color}) => {
     const vender = () => {
         setVendido(true)
         setReservado(true)
+        const elemento = fotoCupcake.current
+        //le agrego una clase.
+        elemento.classList.add("vendido")
     }
 
     const reservar = () => {
         setReservado(true)
     }
 
-    //tome al elemento del DOM real al que hacia referencia
-    useEffect(()=>{
-        const elemento = fotoCupcake.current
-        console.log(elemento)
-    }, [reservado])
-
-
     return(
         <div className="cupcake">
-            <img ref={fotoCupcake} src={foto} alt ={sabor} className="vendido"/>
+            {/*le agrego el ref a la imagen*/}
+            <img ref={fotoCupcake} src={foto} alt ={sabor}/>
             <h2>{color}</h2>
             <p>{`Sabor:  ${sabor}`}</p>
 

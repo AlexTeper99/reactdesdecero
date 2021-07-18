@@ -4,7 +4,11 @@ import Cupcake from "./Cupcake";
 
 const App = () => (
     <div>
-      <Cupcake color="rosa" sabor="vainilla" foto="/te"/>
+      <Cupcake color="rosa" sabor="vainilla" foto="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+        <Cupcake color="rosa" sabor="vainilla" foto="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+        <Cupcake color="rosa" sabor="vainilla" foto="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+        <Cupcake color="rosa" sabor="vainilla" foto="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+        <Cupcake color="rosa" sabor="vainilla" foto="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
         {/*<Cupcake color="azul" sabor="chocolate" />*/}
 
     </div>

@@ -1,6 +1,13 @@
+/*.vendido{*/
+/*    filter: grayscale(1);*/
+/*}*/
+
 .vendido{
     filter: grayscale(1);
 }
 
+img{
+    width: 200px;
+}
 
 
