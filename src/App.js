@@ -4,7 +4,7 @@ import Cupcake from "./Cupcake";
 
 const App = () => (
     <div>
-      <Cupcake color="rosa" sabor="vainilla" />
+      <Cupcake color="rosa" sabor="vainilla" foto="/te"/>
         {/*<Cupcake color="azul" sabor="chocolate" />*/}
 
     </div>

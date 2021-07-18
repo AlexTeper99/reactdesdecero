@@ -1,13 +1,14 @@
-import {useState, useEffect} from "react"
+import {useState, useEffect, useRef} from "react"
 import "./Cupcake.css"
 
-const Cupcake = ({sabor, color}) => {
+const Cupcake = ({foto, sabor, color}) => {
 
-    //creo dos estados.
     const [vendido,setVendido] = useState(false)
     const [reservado,setReservado] = useState(false)
 
-    //vender ahora va a ser una funcion
+    //digo que esto va a ser una referencia
+    const fotoCupcake = useRef()
+
     const vender = () => {
         setVendido(true)
         setReservado(true)
@@ -17,17 +18,16 @@ const Cupcake = ({sabor, color}) => {
         setReservado(true)
     }
 
-    //param1: Una funcion que se va a ejecutar cada vez que mi componente se va a montar/actualizar.
-    //param2 OPCIONAL: Un array que recibe los valores del estado que pueden ir cambiando. Esta funcion se va a volver a ejecutar cada vez que cambia el valor que esta dentro del array.
-    //Si quiero que se ejecute solo 1 vez doy el array vacio, si quiero que cualquier cambio de estado llame a la funcion saco el array y si quiero que observe y se llame con un cambio de un valor en particular lo pongo en el array
+    //tome al elemento del DOM real al que hacia referencia
     useEffect(()=>{
-        console.log('Estamos por iniciar el componente', Date.now())
-    }, [vendido])
+        const elemento = fotoCupcake.current
+        console.log(elemento)
+    }, [reservado])
 
 
     return(
         <div className="cupcake">
-          //  <img src={} alt ={sabor}/>
+            <img ref={fotoCupcake} src={foto} alt ={sabor} className="vendido"/>
             <h2>{color}</h2>
             <p>{`Sabor:  ${sabor}`}</p>
 
