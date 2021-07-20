@@ -1,5 +1,7 @@
 import "../styles/styles.scss"
 import Header from "./sections/Header";
+import Home from "./pages/home";
+import Cupcackes from "./pages/cupcackes";
 
 /*
 Como solucionar el error:
@@ -7,7 +9,12 @@ Como solucionar el error:
 */
 
 const App = () => (
-    <Header> </Header>
+    <>
+        <Header></Header>
+        <Home></Home>
+        <Cupcackes></Cupcackes>
+    </>
+
 )
 
 export default App;
