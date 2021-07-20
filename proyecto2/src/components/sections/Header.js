@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 const Header = () => (
     <header className="main-header">
@@ -11,9 +11,10 @@ const Header = () => (
         <div className="s-grid-1 lg-cols-3 s-cross-center s-main-end header-links">
             <nav className="main-menu" id="main-menu">
                 <ul>
-                    <li><Link to="/">Inicio</Link></li>
-                    <li><Link to="/cupcakes">Cupcakes</Link></li>
-                    <li><Link to="/nosotros">Nosotros</Link></li>
+
+                    <li><NavLink to="/" exact>Inicio</NavLink></li>
+                    <li><NavLink to="/cupcakes" exact>Cupcakes</NavLink></li>
+                    <li><NavLink to="/nosotros" exact>Nosotros</NavLink></li>
                 </ul>
             </nav>
             {/*<div className="main-menu-toggle to-l" id="main-menu-toggle"></div>*/}
@@ -21,6 +22,11 @@ const Header = () => (
     </div>
 </header>)
 
+/*
+Si estoy en el menu principal uso NavLink, util para resaltar el elemento.
+Si no quiero que resalte a los links hijos (que su ruta esta contenida) uso la propiedad exact.
 
+React router tiene 4 hooks: Ver en la documentacion de react router.
+ */
 
 export default Header
