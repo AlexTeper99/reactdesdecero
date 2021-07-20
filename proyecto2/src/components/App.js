@@ -1,5 +1,5 @@
-import "./styles/styles.scss"
-import Header from "./Header";
+import "../styles/styles.scss"
+import Header from "./sections/Header";
 
 /*
 Como solucionar el error:
