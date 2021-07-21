@@ -1,0 +1,24 @@
+{
+  "cupcackes": [
+    {
+      "sabor": "Vainilla",
+      "color": "amarillo",
+      "descripcion": "Gran cupacke sabor vainilla clasica",
+      "precio": 10
+    },
+    {
+      "sabor": "Chocolate",
+      "color": "marron",
+      "descripcion": "Gran cupacke sabor chocolate clasico",
+      "precio": 15
+    },
+
+    {"sabor": "Fresa",
+      "color": "Rojo",
+      "descripcion": "Gran cupacke sabor fresa clasica",
+      "precio": 20 }
+  ]
+
+
+}
+
