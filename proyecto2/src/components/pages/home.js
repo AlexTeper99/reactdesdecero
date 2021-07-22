@@ -10,7 +10,7 @@ const Home = () => (
                 <div className="main-banner__data s-center">
                     <p className="s-mb-0 t2">Bienvenido a EdCupcakes</p>
                     <p>Un sitio lleno de sabores.</p>
-                    <a className="button" href="#">Cupcakes</a>
+                    <a className="button" href="/cupcakes">Cupcakes</a>
                 </div>
             </div>
         </div>

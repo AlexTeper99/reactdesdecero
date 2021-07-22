@@ -1,22 +1,30 @@
 {
   "cupcackes": [
     {
+      "id": "1",
       "sabor": "Vainilla",
       "color": "amarillo",
       "descripcion": "Gran cupacke sabor vainilla clasica",
-      "precio": 10
+      "precio": 10,
+      "imagen": "https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     },
     {
+      "id": "2",
       "sabor": "Chocolate",
       "color": "marron",
       "descripcion": "Gran cupacke sabor chocolate clasico",
-      "precio": 15
+      "precio": 15,
+      "imagen": "https://images.pexels.com/photos/635409/pexels-photo-635409.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     },
 
-    {"sabor": "Fresa",
+    {
+      "id": "3",
+      "sabor": "Fresa",
       "color": "Rojo",
       "descripcion": "Gran cupacke sabor fresa clasica",
-      "precio": 20 }
+      "precio": 20,
+      "imagen": "https://images.pexels.com/photos/4109784/pexels-photo-4109784.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    }
   ]
 
 

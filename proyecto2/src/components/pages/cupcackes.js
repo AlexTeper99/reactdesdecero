@@ -25,7 +25,25 @@ const Cupcackes = () => {
                 cupcakes ? (
                     <section>
                         {
-                            cupcakes.map(c => <Cupcake/>)
+                            cupcakes.map(({
+                                       descripcion,
+                                       imagen,
+                                       sabor,
+                                       color,
+                                       precio,
+                                        id
+                            }) => (
+                                <Cupcake
+                                    {/*Despues de .map necesito si o si un id para identificar al elemento*/}
+                                    key={id}
+                                    imagen={imagen}
+                                    descripcion={descripcion}
+                                    sabor={sabor}
+                                    color={color}
+                                    precio={precio}
+
+                                />
+                            ))
                         }
                     </section>
                 ) : (<span>Cargando.....</span>)
