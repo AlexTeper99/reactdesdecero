@@ -13,7 +13,7 @@ const Cupcackes = () => {
     const [cupcakes, setCupcakes] = useState()
 
      useEffect(() => {
-         fetch("http://localhost:3000/cupcackes")
+         fetch(`${process.env.REACT_APP_URL_API}cupcakes`)
              .then(response => response.json())
              .then(data => setCupcakes(data)) //cupcakes (el estado) va a ser lo que venga en el dato. Ahi lo voy a poder ver en el componente
      }, [])
@@ -23,7 +23,8 @@ const Cupcackes = () => {
             <h1> Pagina de Cupcakes</h1>
             {
                 cupcakes ? (
-                    <section>
+
+                    <section  className="ed-grid s-grid-2 m-grid-3 lg-grid-4 row-gap">
                         {
                             cupcakes.map(({
                                        descripcion,
@@ -34,7 +35,6 @@ const Cupcackes = () => {
                                         id
                             }) => (
                                 <Cupcake
-                                    {/*Despues de .map necesito si o si un id para identificar al elemento*/}
                                     key={id}
                                     imagen={imagen}
                                     descripcion={descripcion}
@@ -52,8 +52,10 @@ const Cupcackes = () => {
         </div>
     )
 }
-// uso .map y no forEach porque no quiero trabajar con el array original.
-//hago que el array cupcakes se recorra con el .map y voy renderizando un cupcake con c/u de los elementos del array
-//En un principio mi pagina esta esperando los datos para que se traigan. Hasta que terminen de cargar aparece vacia (y esta feo)
+/*
+Las variables de entorno permiten usar valores que van a cambiar
+dependiendo del entorno en donde te encuentres.
+
+ */
 
 export default Cupcackes
