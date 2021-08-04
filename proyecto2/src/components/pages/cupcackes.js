@@ -13,7 +13,7 @@ const Cupcackes = () => {
     const [cupcakes, setCupcakes] = useState()
 
      useEffect(() => {
-         fetch(`${process.env.REACT_APP_URL_API}cupcakes`)
+         fetch(`http://localhost:3000`)
              .then(response => response.json())
              .then(data => setCupcakes(data)) //cupcakes (el estado) va a ser lo que venga en el dato. Ahi lo voy a poder ver en el componente
      }, [])
